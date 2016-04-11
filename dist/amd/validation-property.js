@@ -40,7 +40,7 @@ define(['exports', './validation-rules-collection', './path-observer', './deboun
         var dependencyObserver = new _pathObserver.PathObserver(observerLocator, validationGroup.subject, dependencies[i]).getObserver();
         dependencyObserver.subscribe(function () {
           _this.debouncer.debounce(function () {
-            _this.validateCurrentValue(true);
+            _this.validateCurrentValue(false, true);
           });
         });
         this.dependencyObservers.push(dependencyObserver);
