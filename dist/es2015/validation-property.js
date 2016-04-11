@@ -26,7 +26,7 @@ export let ValidationProperty = class ValidationProperty {
       let dependencyObserver = new PathObserver(observerLocator, validationGroup.subject, dependencies[i]).getObserver();
       dependencyObserver.subscribe(() => {
         this.debouncer.debounce(() => {
-          this.validateCurrentValue(true);
+          this.validateCurrentValue(false, true);
         });
       });
       this.dependencyObservers.push(dependencyObserver);
