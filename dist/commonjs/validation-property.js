@@ -41,7 +41,7 @@ var ValidationProperty = exports.ValidationProperty = function () {
       var dependencyObserver = new _pathObserver.PathObserver(observerLocator, validationGroup.subject, dependencies[i]).getObserver();
       dependencyObserver.subscribe(function () {
         _this.debouncer.debounce(function () {
-          this.validateCurrentValue(false, true);
+          _this.validateCurrentValue(false, true);
         });
       });
       this.dependencyObservers.push(dependencyObserver);
