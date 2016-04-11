@@ -28,7 +28,7 @@ export class ValidationProperty {
         .getObserver();
       dependencyObserver.subscribe(() => {
         this.debouncer.debounce(() => {
-          this.validateCurrentValue(true);
+          this.validateCurrentValue(false, true);
         });
       });
       this.dependencyObservers.push(dependencyObserver);
